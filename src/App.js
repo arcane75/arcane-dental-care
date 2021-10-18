@@ -3,10 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
-import Header from './components/Header/Header';
 import AuthProvider from './context/AuthProvider';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
+import UserLogin from './components/userlogin/UserLogin';
 
 function App() {
   return (
@@ -22,12 +20,9 @@ function App() {
               <Home></Home>
             </Route>
 
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-
-            <Route path="/register">
-              <Register></Register>
+          
+            <Route path="/userlogin">
+              <UserLogin></UserLogin>
             </Route>
 
           </Switch>
