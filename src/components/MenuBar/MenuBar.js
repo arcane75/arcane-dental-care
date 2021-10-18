@@ -22,15 +22,15 @@ const MenuBar = () => {
                                 />
                             </Form>
 
-                            <NavLink className="pe-3 ps-3 item" to="/home"><i class="fas fa-home"></i> Home</NavLink>
+                            <NavLink className="pe-3 ps-3 item" to="/home"><i className="fas fa-home"></i> Home</NavLink>
 
-                            <NavLink className="pe-3 item" to="/services"><i class="fas fa-tasks"></i> Services</NavLink>
+                            <NavLink className="pe-3 item" to="/services"><i className="fas fa-tasks"></i> Services</NavLink>
 
-                            <NavLink className="pe-3 item" to="/contact"><i class="fas fa-envelope"></i> Contact</NavLink>
+                            <NavLink className="pe-3 item" to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
 
-                            <NavLink className="pe-3 item" to="/appointment"><i class="far fa-calendar-check"></i> Appointment</NavLink>
+                            <NavLink className="pe-3 item" to="/appointment"><i className="far fa-calendar-check"></i> Appointment</NavLink>
 
-                            <NavLink className="item" to="/login"><i class="fas fa-user"></i> Login</NavLink>
+                            <NavLink className="item" to="/login"><i className="fas fa-user"></i> Login</NavLink>
 
                         </Nav>
                     </Navbar.Collapse>
