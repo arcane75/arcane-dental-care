@@ -9,6 +9,7 @@ import ContactUs from './components/ContactUs/ContactUs';
 import Appointment from './components/Appointment/Appointment';
 import Error from './components/Error/Error';
 import AboutUs from './components/AboutUs/AboutUs';
+import AllServices from './components/AllServices/AllServices';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
               <UserLogin></UserLogin>
             </Route>
 
+          <Route path="/services">
+                  <AllServices></AllServices>
+          </Route>
 
             <Route path="/contact">
               <ContactUs></ContactUs>
