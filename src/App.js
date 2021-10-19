@@ -6,10 +6,10 @@ import Home from './components/Home/Home';
 import AuthProvider from './context/AuthProvider';
 import UserLogin from './components/userlogin/UserLogin';
 import ContactUs from './components/ContactUs/ContactUs';
-import Appointment from './components/Appointment/Appointment';
 import Error from './components/Error/Error';
 import AboutUs from './components/AboutUs/AboutUs';
-import AllServices from './components/AllServices/AllServices';
+import AllService from './components/AllService/AllService';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -30,9 +30,9 @@ function App() {
               <UserLogin></UserLogin>
             </Route>
 
-          <Route path="/services">
-                  <AllServices></AllServices>
-          </Route>
+            <PrivateRoute path ="/services">
+              <AllService></AllService>
+            </PrivateRoute>
 
             <Route path="/contact">
               <ContactUs></ContactUs>

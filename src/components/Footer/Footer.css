@@ -1,12 +1,12 @@
 .icon {
     margin: 3px;
     padding:3px;
-    background-color: rgba(31, 104, 153, 0.137);
+    background-color: #115278;
     color: rgb(155, 155, 155);
     font-size: 30px;
   }
   .icon:hover {
-    background-color: rgb(76, 107, 211);
+    background-color: rgb(207, 12, 12);
   }
   .item{
     text-decoration: none;
@@ -29,7 +29,7 @@
     background-color: rgb(235, 224, 224);
   }
   .footer-container {
-    background-color: #23427E;
+    background-color: #233542;
     padding: 50px;
     color: rgb(216, 209, 209);
   }

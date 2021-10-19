@@ -31,7 +31,7 @@ const MenuBar = () => {
 
                             <NavLink className="pe-3 item" to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
 
-                            <NavLink className="pe-3 item" to="/appointment"><i className="far fa-calendar-check"></i> Appointment</NavLink>
+                            <NavLink className="pe-3 item" to="/appointment"><i className="far fa-calendar-check"></i> About Us</NavLink>
 
 
                             {(user?.email) ?
