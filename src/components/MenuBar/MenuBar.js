@@ -3,7 +3,7 @@ import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/logo.png';
-import UserLogin from '../userlogin/UserLogin';
+
 import "./MenuBar.css";
 const MenuBar = () => {
     const { user } = useFirebase();
@@ -36,9 +36,9 @@ const MenuBar = () => {
 
                             {(user?.email) ?
 
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> </NavLink>
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Logout </NavLink>
                                 :
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> </NavLink>
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Login</NavLink>
                             }
 
                         </Nav>
