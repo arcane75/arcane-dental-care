@@ -2,7 +2,8 @@ import { useState, React, useEffect } from "react";
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.init';
 import useAuth from '../../hooks/useAuth';
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
+import Header from "../Header/Header";
 
 
 initializeAuthentication();
@@ -27,11 +28,28 @@ const UserLogin = () => {
         signInUsingGoogle()
             .then(result => {
                 history.push(redirect_uri);
+                logOut();
             })
 
     }
+    // observe whether user auth state changed or not
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            }
+        });
+        return unsubscribe;
+    }, [])
 
-
+    //on State Change 
+    useEffect(() => {
+        onAuthStateChanged(auth,user => {
+            if (user) {
+                setUser(user)
+            }
+        })
+    },[])
 
     const toggleLogin = e => {
         setIsLogin(e.target.checked)
@@ -73,20 +91,23 @@ const UserLogin = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                history.push("/home");
+                history.push(redirect_uri);
                 console.log(user);
                 setError('');
+                logOut();
             })
             .catch(error => {
                 setError(error.message);
             })
+
+            return user ;
     }
 
     const registerNewUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                history.push("/home");
+                history.push(redirect_uri);
                 console.log(user);
                 setError('');
                 verifyEmail();
@@ -95,8 +116,18 @@ const UserLogin = () => {
             .catch(error => {
                 setError(error.message);
             })
+
+            return user ;
     }
 
+    //Sign out
+    const logOut = () => {
+        signOut(auth).then(() => {
+            setUser({});
+            history.push("/home");
+        })
+    }
+    
     const setUserName = () => {
         updateProfile(auth.currentUser, { displayName: name })
             .then(result => { })
@@ -108,10 +139,13 @@ const UserLogin = () => {
                 console.log(result);
             })
     }
-
+    
 
 
     return (
+        <>
+        <Header></Header>
+
         <section className="vh-100" style={{ backgroundColor: "#eee" }}>
             <div className="container h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
@@ -194,6 +228,7 @@ const UserLogin = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

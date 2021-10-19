@@ -1,9 +1,12 @@
 import React from 'react';
-import { Container, Form, FormControl, Nav, Navbar} from 'react-bootstrap';
+import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/logo.png';
+import UserLogin from '../userlogin/UserLogin';
 import "./MenuBar.css";
 const MenuBar = () => {
+    const { user } = useFirebase();
     return (
         <div className="menubar">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -13,7 +16,7 @@ const MenuBar = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className=" justify-content-end " style={{ width: "100%" }}>
 
-                            <Form className="d-flex w-50">
+                            <Form className="d-flex w-25">
                                 <FormControl
                                     type="search"
                                     placeholder="Search"
@@ -30,7 +33,13 @@ const MenuBar = () => {
 
                             <NavLink className="pe-3 item" to="/appointment"><i className="far fa-calendar-check"></i> Appointment</NavLink>
 
-                            <NavLink className="item" to="/login"><i className="fas fa-user"></i> Login</NavLink>
+
+                            {(user?.email) ?
+
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> </NavLink>
+                                :
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> </NavLink>
+                            }
 
                         </Nav>
                     </Navbar.Collapse>
