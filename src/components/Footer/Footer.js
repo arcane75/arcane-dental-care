@@ -12,16 +12,16 @@ const Footer = () => {
             <div className="icons-container d-flex text-center ">
 
               <div className="icon">
-                <i class="fab fa-facebook-square fa-2x"></i>
+                <i className="fab fa-facebook-square fa-2x"></i>
               </div>
               <div className="icon">
-                <i class="fab fa-instagram-square fa-2x"></i>
+                <i className="fab fa-instagram-square fa-2x"></i>
               </div>
               <div className="icon">
-                <i class="fab fa-twitter-square fa-2x"></i>
+                <i className="fab fa-twitter-square fa-2x"></i>
               </div>
               <div className="icon">
-                <i class="fab fa-youtube-square fa-2x"></i>
+                <i className="fab fa-youtube-square fa-2x"></i>
               </div>
             </div>
             <p className="mt-5">

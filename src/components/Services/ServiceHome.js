@@ -1,19 +1,26 @@
 import React from 'react';
-import useFetch from '../../hooks/useFetch';
 import SingleService from '../Service/SingleService';
+import { useEffect, useState } from 'react';
 
 const ServiceHome = () => {
-    const [services] = useFetch();
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        fetch("./services.json")
+            .then(res => res.json())
+            .then(data => console.log(data));
+    }, [])
+
     return (
         <div>
             {
-                services.map(service => 
-                <SingleService
-                key = {service.id}
-                service = {service}
-                >
+                services.map(service =>
+                    <SingleService
+                        key={service.id}
+                        service={service}
+                    >
 
-                </SingleService>)
+                    </SingleService>)
             }
         </div>
     );

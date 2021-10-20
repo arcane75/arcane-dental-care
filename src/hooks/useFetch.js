@@ -4,9 +4,9 @@ const useFetch = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("services.json")
+        fetch("https://jsonplaceholder.typicode.com/users")
             .then(res => res.json())
-            .then(data => setServices(data));
+            .then(data => console.log(data));
     }, [])
     return [services]
 };

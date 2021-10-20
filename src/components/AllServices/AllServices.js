@@ -1,21 +1,21 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
-import MenuBar from '../MenuBar/MenuBar';
 import { useEffect, useState } from 'react';
 import AllService from '../AllService/AllService';
 
 const AllServices = () => {
-    const [allservices, setAllservices] = useState();
+    const [allservices, setAllservices] = useState([]);
 
     useEffect(() => {
-        fetch('allservices.json')
+        fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
-        .then(data => setAllservices(data))
+        .then(data => console.log(data))
     }, [])
+    
     return (
         <div>
                 {
-                    allservices.map(allservice => 
+                    allservices?.map(allservice => 
                     <AllService
                     key = {allservice.id}
                     allservice = {allservice}

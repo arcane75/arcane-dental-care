@@ -35,17 +35,8 @@ const UserLogin = () => {
                 logOut();
             })
             .finally(() => setIsLoading(false));
-
     }
-    // observe whether user auth state changed or not
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-            }
-        });
-        return unsubscribe;
-    }, [])
+
 
     // observe user state change
     useEffect(() => {
@@ -101,6 +92,7 @@ const UserLogin = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
+                setUser(user);
                 history.push(redirect_uri);
                 console.log(user);
                 setError('');
@@ -137,7 +129,7 @@ const UserLogin = () => {
             setUser({});
             history.push("/home");
         })
-        .finally(() => setIsLoading(false));
+            .finally(() => setIsLoading(false));
     }
 
     const setUserName = () => {
@@ -240,6 +232,8 @@ const UserLogin = () => {
                     </div>
                 </div>
             </section>
+
+
         </>
     );
 };

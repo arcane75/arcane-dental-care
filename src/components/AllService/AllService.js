@@ -3,14 +3,14 @@ import Footer from '../Footer/Footer';
 import MenuBar from '../MenuBar/MenuBar';
 
 const AllService = (props) => {
-    const { name, img, description} = props.allservice || {};
+    const { name, email, phone} = props.allservice || {};
     return (
         <>
         <MenuBar></MenuBar>
         <div>
-            <img src = {img} alt=" "/>
+            <h5> {email} </h5>
             <h4>{name}</h4>
-            <p>{description}</p>
+            <p>{phone}</p>
         </div>
         <Footer></Footer>
         </>

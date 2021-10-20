@@ -20,7 +20,7 @@ const ContactUs = () => {
                     <div className="col-md-9">
                         <div className="contact-form">
                             <div className="form-group">
-                                <label class="title col-sm-2 " for="fname">First Name:</label>
+                                <label className="title col-sm-2 " for="fname">First Name:</label>
                                 <div className="col-sm-10">
                                     <input type="text" className="form-control" id="fname" placeholder="Enter First Name" name="fname" />
                                 </div>

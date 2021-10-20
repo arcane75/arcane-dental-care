@@ -1,10 +1,13 @@
 import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import initializeAuthentication from '../../Firebase/firebase.init';
 import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/logo.png';
-
 import "./MenuBar.css";
+
+initializeAuthentication();
+
 const MenuBar = () => {
     const { user } = useFirebase();
     return (
@@ -36,9 +39,10 @@ const MenuBar = () => {
 
                             {(user?.email) ?
 
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Logout </NavLink>
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Logout {user?.displayName} </NavLink>
                                 :
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Login</NavLink>
+                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Login 
+                                </NavLink>
                             }
 
                         </Nav>
