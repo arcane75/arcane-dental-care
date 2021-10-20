@@ -1,0 +1,67 @@
+.homeService{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.homeService img{
+    width:250px;
+    margin-bottom: 20px;
+
+}
+.homeService p{
+    text-align: justify;
+    color:#757575;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+}
+.homeService h2{
+    color: #115278;
+}
+.service-text{
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+.service-text h2{
+color: #BC74A5;
+font-weight: 600;
+font-size: 40px;
+}
+.service-text h1{
+color:#0E54AE ;
+font-size: 80px;
+font-weight: 900;
+}
+.service-btn{
+    text-align: right;
+}
+
+
+.btn {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    padding: 18px 45px;
+    border-radius: 45px;
+    font-weight: 500;
+    border: 1px solid;
+    position: relative;
+    z-index: 1;
+    transition: .3s ease-in;
+    overflow: hidden
+}
+
+.btn-primary:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102%;
+    height: 100%;
+    background: linear-gradient(45deg, #00a8f4 0%, #02d1a1 100%);
+    z-index: -1;
+    transition: ease 0.3s
+}

@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import SingleService from '../Service/SingleService';
+import Subscription from '../Subscribe/Subscription';
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             <Header></Header>
             <Banner></Banner>
             <SingleService></SingleService>
+            <Subscription></Subscription>
             <Footer></Footer>
         </div>
     );

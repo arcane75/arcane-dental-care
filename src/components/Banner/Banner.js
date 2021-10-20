@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import banner1 from '../../images/dental-team.jpg';
 import banner2 from '../../images/Routine-Dental-Care.jpg';
-import banner3 from '../../images/tooth-extraction.jpg'
 
 const Banner = () => {
 
@@ -17,10 +16,6 @@ const Banner = () => {
             <div>
                 <img src={banner2} alt="" />
                 <p className="legend">Dental Tooth Extraction</p>
-            </div>
-            <div>
-                <img src={banner3} alt="" />
-                <p className="legend">Dental Implants</p>
             </div>
         </Carousel>
         </div>

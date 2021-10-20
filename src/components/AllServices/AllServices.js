@@ -7,22 +7,21 @@ const AllServices = () => {
     const [allservices, setAllservices] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => res.json())
-        .then(data => console.log(data))
+        fetch('allservices.json')
+            .then(res => res.json())
+            .then(data => console.log(data))
     }, [])
-    
     return (
         <div>
-                {
-                    allservices?.map(allservice => 
+            {
+                allservices?.map(allservice =>
                     <AllService
-                    key = {allservice.id}
-                    allservice = {allservice}
+                        key={allservice.id}
+                        allservice={allservice}
                     >
 
                     </AllService>)
-                }
+            }
             <Footer></Footer>
         </div>
     );
