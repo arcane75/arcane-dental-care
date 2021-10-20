@@ -16,11 +16,11 @@ const Home = () => {
             <div className="container my-3">
                 <div className="row serviceinfo">
 
-                    <div className="service-text col ">
+                    <div className="service-text col col-sm-12 ">
                         <h2> Committed To</h2>
                         <h1>Excellence </h1>
                     </div>
-                    <div className="col my-auto">
+                    <div className="col">
 
                         <Button className="btn-lg btn btn-warning mx-auto"> All Services</Button>
                     </div>

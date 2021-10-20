@@ -30,17 +30,6 @@ const useFirebase = () => {
         return signInWithPopup(auth, googleProvider);
     }
 
-
-    // // observe whether user auth state changed or not
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, (user) => {
-    //         if (user) {
-    //             setUser(user);
-    //         }
-    //     });
-    //     return unsubscribe;
-    // }, [])
-
     
     //Sign out
     const logOut = () => {

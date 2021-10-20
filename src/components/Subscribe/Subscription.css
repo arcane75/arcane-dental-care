@@ -15,7 +15,7 @@
     -webkit-transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
     transform: perspective(1800px) rotateY(20deg) skewY(1deg) translateX(50px);
     padding: 70px 50px;
-    width: 100%;
+    width: 80%;
     background: linear-gradient(80deg, #0030cc 0%, #00a4db 100%);
     top: 100px
 }

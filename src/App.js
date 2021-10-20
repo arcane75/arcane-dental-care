@@ -39,7 +39,7 @@ function App() {
               <ContactUs></ContactUs>
             </Route>
 
-            <Route path="/appointment">
+            <Route path="/about">
               <AboutUs></AboutUs>
             </Route>
 

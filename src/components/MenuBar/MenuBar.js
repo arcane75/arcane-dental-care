@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import initializeAuthentication from '../../Firebase/firebase.init';
 import useFirebase from '../../hooks/useFirebase';
@@ -9,7 +9,8 @@ import "./MenuBar.css";
 initializeAuthentication();
 
 const MenuBar = () => {
-    const { user } = useFirebase();
+    const { user, logOut } = useFirebase();
+    console.log(user);
     return (
         <div className="menubar">
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
@@ -34,12 +35,12 @@ const MenuBar = () => {
 
                             <NavLink className="pe-3 item" to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
 
-                            <NavLink className="pe-3 item" to="/appointment"><i className="far fa-calendar-check"></i> About Us</NavLink>
+                            <NavLink className="pe-3 item" to="/about"><i className="far fa-calendar-check"></i> About Us</NavLink>
 
 
                             {(user?.email) ?
 
-                                <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Logout {user?.displayName} </NavLink>
+                                <Button className="logoutbtn btn-sm" onClick={logOut}>Logout {user?.displayName}</Button>
                                 :
                                 <NavLink className="item" to="/userlogin"><i className="fas fa-user"></i> Login 
                                 </NavLink>

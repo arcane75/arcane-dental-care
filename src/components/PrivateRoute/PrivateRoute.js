@@ -1,14 +1,13 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router';
+import { Redirect, Route } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import initializeAuthentication from '../../Firebase/firebase.init';
 import useAuth from '../../hooks/useAuth';
-import UserLogin from '../userlogin/UserLogin';
 
 initializeAuthentication();
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = UserLogin();
+    const { user, isLoading } = useAuth();
     
     console.log(user);
     if (isLoading) {

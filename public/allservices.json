@@ -1,74 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Dental Fillings",
+        "name": "Cosmetic Dentistry",
         "img": "https://i.ibb.co/mSnPq7z/home-service-1.png",
-        "description": "r"
-    },
-    {
-        "id": 2,
-        "name": "Dental Implants",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 3,
-        "name": "Root Canal Treatment",
-        "img": "https://i.ibb.co/nP9p7hQ/home-service-3.png",
-        "description": "r"
-    },
-    {
-        "id": 4,
-        "name": "Orthodontics",
-        "img": "https://i.ibb.co/jGNkJYF/home-service-4.png",
-        "description": "r"
-    },
-    {
-        "id": 5,
-        "name": "Tooth Extraction",
-        "img": "https://i.ibb.co/mSnPq7z/home-service-1.png",
-        "description": "r"
-    },
-    {
-        "id": 6,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 7,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 8,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 9,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 10,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 11,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
-    },
-    {
-        "id": 12,
-        "name": "Teeth Braces",
-        "img": "https://i.ibb.co/WyjKyyg/home-service-2.png",
-        "description": "r"
+        "description": "We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.We are use medication to help patients relax during dental procedures. Its sometimes referred to as sleep dentistry, although thats not entirely accurate.A root canal surgery is an endodontic treatment done by an endodontist or dentist in order to treat a diseased or damaged tooth with the tooth root exposed. It involves removing the inflamed tooth pulp and tooth root from underneath the enamel and dentin in order to relieve pain and save a tooth from extraction (hence creating a root canal). "
     }
 ]
