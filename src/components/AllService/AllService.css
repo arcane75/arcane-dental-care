@@ -9,12 +9,13 @@
     text-align: justify;
 }
 
+.allservice-Style p{
+    text-align: justify;
+}
+
 @media only screen and (min-width: 600px) {
 .allservice-Style{
     
-}
-.allservice-Style img{
-
 }
     
 }

@@ -31,9 +31,9 @@ function App() {
               <UserLogin></UserLogin>
             </Route>
 
-            <Route path ="/services">
+            <PrivateRoute path ="/services">
               <AllServices></AllServices>
-            </Route>
+            </PrivateRoute>
 
             <Route path="/contact">
               <ContactUs></ContactUs>

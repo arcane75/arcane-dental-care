@@ -5,7 +5,7 @@ const AllService = (props) => {
     const { name, img, description } = props.allservice || {};
     return (
         <>
-            <div className="container my-5 ">
+            <div className="container allservice-Style my-5 ">
                 <div className="row ">
 
                     <div className="col-lg-6 col-12 col-6">

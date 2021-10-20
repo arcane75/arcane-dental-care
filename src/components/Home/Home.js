@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import SingleService from '../Service/SingleService';
 import ServiceHome from '../Services/ServiceHome';
 import Subscription from '../Subscribe/Subscription';
+import UserReviews from '../UserReviews/UserReviews';
 import './Home.css';
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
 
             </div>
             <ServiceHome></ServiceHome>
+            <UserReviews></UserReviews>
             <Subscription></Subscription>
             <Footer></Footer>
         </div>

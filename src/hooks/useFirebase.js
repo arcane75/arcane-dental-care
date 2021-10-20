@@ -3,7 +3,6 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 import initializeAuthentication from '../Firebase/firebase.init';
 
 initializeAuthentication();
-
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);

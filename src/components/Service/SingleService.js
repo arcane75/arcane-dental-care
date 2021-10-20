@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import AllServices from '../AllServices/AllServices';
+import { Link } from 'react-router-dom';
 
 import './SingleService.css';
 
 const SingleService = (props) => {
     const { name, img, description } = props.service || {};
-    const {} = AllServices();
- 
+
     return (
         <>
             <div className="home-service">
@@ -15,7 +14,10 @@ const SingleService = (props) => {
                     <img src={img} alt=" " />
                     <h3>{name}</h3>
                     <p>{description}</p>
-                    <Button className="btn-md btn btn-warning">Explore item</Button>
+                    <Link to ="/services">
+                        <Button className="btn-md btn btn-warning">Explore item</Button>
+                    </Link>
+
                 </div>
             </div>
 
