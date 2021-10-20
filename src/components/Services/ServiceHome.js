@@ -1,6 +1,7 @@
 import React from 'react';
 import SingleService from '../Service/SingleService';
 import { useEffect, useState } from 'react';
+import './ServiceHome.css';
 
 const ServiceHome = () => {
     const [services, setServices] = useState([]);
@@ -8,11 +9,11 @@ const ServiceHome = () => {
     useEffect(() => {
         fetch("./services.json")
             .then(res => res.json())
-            .then(data => console.log(data));
+            .then(data => setServices(data));
     }, [])
 
     return (
-        <div>
+        <div className="home-service-container">
             {
                 services.map(service =>
                     <SingleService

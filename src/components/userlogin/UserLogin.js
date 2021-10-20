@@ -212,7 +212,7 @@ const UserLogin = () => {
                                                 <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                                                     <p className="lead fw-normal mb-0 me-3">Sign {isLogin ? 'in' : 'up'} with</p>
                                                     <button type="button" className="btn btn-primary btn-floating mx-1 w-25" onClick={handleGoogleLogin} >
-                                                        <i className="fab fa-google"> Google</i>
+                                                        <i className="fab fa-google"></i>
                                                     </button>
 
                                                 </div>

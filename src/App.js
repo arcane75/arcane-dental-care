@@ -10,6 +10,7 @@ import Error from './components/Error/Error';
 import AboutUs from './components/AboutUs/AboutUs';
 import AllService from './components/AllService/AllService';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import AllServices from './components/AllServices/AllServices';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
             </Route>
 
             <Route path ="/services">
-              <AllService></AllService>
+              <AllServices></AllServices>
             </Route>
 
             <Route path="/contact">

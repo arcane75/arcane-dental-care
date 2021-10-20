@@ -7,9 +7,9 @@ const AllServices = () => {
     const [allservices, setAllservices] = useState([]);
 
     useEffect(() => {
-        fetch('allservices.json')
+        fetch('/allservices.json')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setAllservices(data))
     }, [])
     return (
         <div>

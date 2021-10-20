@@ -9,8 +9,19 @@ const SingleService = (props) => {
 
     return (
         <>
-            <div className="container my-3">
-                <div className="row">
+            <div className="home-service">
+                <div >
+                    <img src={img} alt=" " />
+                    <h4>{name}</h4>
+                    <p>{description}</p>
+                    <Button className="btn-md btn btn-warning">Explore item</Button>
+                </div>
+            </div>
+
+
+
+            {/* <div className="container my-3">
+                <div className="row serviceinfo">
 
                     <div className="service-text col ">
                         <h2> Committed To</h2>
@@ -83,7 +94,7 @@ const SingleService = (props) => {
                     <Button className="btn-md btn btn-warning">Explore item</Button>
                 </div>
 
-            </div>
+            </div> */}
         </>
     );
 };
