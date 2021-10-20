@@ -32,7 +32,6 @@ const UserLogin = () => {
             .then(result => {
                 setUser(result.user);
                 history.push(redirect_uri);
-                logOut();
             })
             .finally(() => setIsLoading(false));
     }
